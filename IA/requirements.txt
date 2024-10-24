@@ -8,3 +8,4 @@ scikit-image
 nltk
 spacy
 rank_bm25
+seaborn
