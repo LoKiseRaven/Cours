@@ -1,0 +1,10 @@
+jupyter
+matplotlib
+pandas
+numpy
+scikit-learn
+opencv-python
+scikit-image
+nltk
+spacy
+rank_bm25
