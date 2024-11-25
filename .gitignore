@@ -1,11 +1,15 @@
+# env
 IA/env/
-IA/TP5/animals/
-IA/TP5/animals_small/
-
 Maths/env/
 Maths3D/env/
 Qualite/env/
 Multimedia/env/
 
+# Fichiers lourds 
+IA/TP5/animals/
+IA/TP5/animals_small/
+IA/TP6/fashion_mnist_data.csv
+
+# Projets gitlab
 Automatisation/
 Python/
