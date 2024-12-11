@@ -52,20 +52,13 @@ def myKmeans(im, k):
     couleurs = im.reshape((-1, 3))
     couleurs = np.float32(couleurs)
     
-    # A faire : supprimer ces lignes 
-    imlabels=0
-    imclasses=0
-    centers=0
-    
-    # A faire : decommenter et completer
-    
-    # criteria =  choisi un critère d'arret du kmeans# 
-    #_, labels, (centers) =  appel de la fonction faisant le kmeans    
-    # imlabels=np.zeros( ( im.shape[0], im.shape[1]),  np.uint8)
-    # imlabels =np.uint8( labels.reshape(imlabels.shape))
-    # imclasses = (centers[labels.flatten()])
-    # imclasses = imclasses.reshape(im.shape)
-    
+    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 0.2)
+    _, labels, centers = cv2.kmeans(couleurs, k, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)   
+    imlabels=np.zeros( ( im.shape[0], im.shape[1]),  np.uint8)
+    imlabels =np.uint8( labels.reshape(imlabels.shape))
+    imclasses = (centers[labels.flatten()])
+    imclasses = imclasses.reshape(im.shape)
+
     return(imlabels, imclasses, centers)
 
 """
